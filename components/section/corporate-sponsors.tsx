@@ -1,3 +1,4 @@
+import { SPONSOR_LINK } from "@/constants";
 import Image from "next/image";
 
 export function CorporateSponsors() {
@@ -52,7 +53,7 @@ export function CorporateSponsors() {
 						</a>
 
 						<a
-							href="https://github.com/sponsors/needim"
+							href={SPONSOR_LINK}
 							className="bg-zinc-100/75 group dark:bg-zinc-900 flex p-1 items-center col-span-2"
 						>
 							<Image
@@ -65,7 +66,7 @@ export function CorporateSponsors() {
 						</a>
 
 						<a
-							href="https://github.com/sponsors/needim"
+							href={SPONSOR_LINK}
 							className="bg-zinc-100/75 dark:bg-zinc-900 flex p-1 items-center col-span-2"
 						>
 							<Image
@@ -77,7 +78,7 @@ export function CorporateSponsors() {
 							/>
 						</a>
 						<a
-							href="https://github.com/sponsors/needim"
+							href={SPONSOR_LINK}
 							className="bg-zinc-100/75 dark:bg-zinc-900 flex p-1 items-center col-span-2"
 						>
 							<Image
@@ -89,7 +90,7 @@ export function CorporateSponsors() {
 							/>
 						</a>
 						<a
-							href="https://github.com/sponsors/needim"
+							href={SPONSOR_LINK}
 							className="bg-zinc-100/75 dark:bg-zinc-900 p-1 flex items-center col-span-1"
 						>
 							<Image
@@ -101,7 +102,7 @@ export function CorporateSponsors() {
 							/>
 						</a>
 						<a
-							href="https://github.com/sponsors/needim"
+							href={SPONSOR_LINK}
 							className="bg-zinc-100/75 dark:bg-zinc-900 p-1 flex items-center col-span-1"
 						>
 							<Image
@@ -113,7 +114,7 @@ export function CorporateSponsors() {
 							/>
 						</a>
 						<a
-							href="https://github.com/sponsors/needim"
+							href={SPONSOR_LINK}
 							className="bg-zinc-100/75 dark:bg-zinc-900 p-1 flex items-center col-span-1"
 						>
 							<Image
@@ -125,7 +126,7 @@ export function CorporateSponsors() {
 							/>
 						</a>
 						<a
-							href="https://github.com/sponsors/needim"
+							href={SPONSOR_LINK}
 							className="bg-zinc-100/75 dark:bg-zinc-900 p-1 flex items-center col-span-1"
 						>
 							<Image

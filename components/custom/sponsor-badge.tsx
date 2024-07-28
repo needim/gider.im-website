@@ -1,3 +1,4 @@
+import { SPONSOR_LINK } from "@/constants";
 import { IconHeartFilled } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -11,7 +12,7 @@ export function SponsorBadge({ count }: { count: number }) {
 				</span>
 			</div>
 			<Link
-				href="https://github.com/sponsors/needim"
+				href={SPONSOR_LINK}
 				target="_blank"
 				className="text-sm rounded-l-none border bg-zinc-800 text-white pl-9 rounded-full pr-4 h-[40px] -ml-8 relative overflow-hidden z-0 flex items-center transition-all hover:bg-zinc-700"
 			>
