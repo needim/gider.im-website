@@ -9,16 +9,14 @@ export function ContestFinalists() {
 			avatarUrl:
 				"https://pbs.twimg.com/profile_images/830122878704168960/eK_iIkOD_400x400.jpg",
 			imageUrl: "/contest/ceren.png",
-			figmaUrl:
-				"https://www.figma.com/design/9C9ciWZaDLozIBJxSIfs8Z/giderim-app-design-competition-%3A-ceren?node-id=0-1&t=ihDvO7VKF9VECXgc-1",
+			figmaUrl: "https://fig.page/ceren",
 		},
 		{
 			name: "Numan",
 			avatarUrl:
 				"https://pbs.twimg.com/profile_images/1769398336098844672/7IZRhHNE_400x400.jpg",
 			imageUrl: "/contest/numan.png",
-			figmaUrl:
-				"https://www.figma.com/design/g7rZYlGlPU3v9haE60Um9r/gider.im?node-id=215-4876&t=gy6hk8cmGwgmpcLo-1",
+			figmaUrl: "https://fig.page/numan",
 			xHandle: "numanguness",
 		},
 		{
@@ -27,8 +25,7 @@ export function ContestFinalists() {
 				"https://pbs.twimg.com/profile_images/1804890323736231936/x-fgnRKp_400x400.jpg",
 			xHandle: "Okcaworkshop",
 			imageUrl: "/contest/oktay.png",
-			figmaUrl:
-				"https://www.figma.com/design/KJ7lWqaGAsl1Kn8G0BgkeZ/Gider.im?node-id=0-1&t=pg9mHhQikKznO3Hn-1",
+			figmaUrl: "https://fig.page/oktay",
 		},
 		{
 			name: "Sedef",
@@ -36,8 +33,7 @@ export function ContestFinalists() {
 			avatarUrl:
 				"https://pbs.twimg.com/profile_images/1280939973018112000/UNEDyCg1_400x400.jpg",
 			imageUrl: "/contest/sedef.png",
-			figmaUrl:
-				"https://www.figma.com/design/eBh7j7qHRbz5vFANNf2eHB/Sedef-Hi%C3%A7y%C4%B1lmaz_Gider.im?node-id=0-1&t=LJ567gikLdI8Iv4j-1",
+			figmaUrl: "https://fig.page/sedef",
 		},
 	];
 
