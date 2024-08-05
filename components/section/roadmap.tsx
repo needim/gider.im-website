@@ -115,8 +115,8 @@ export default function Roadmap() {
 		show: { opacity: 1, marginLeft: 0 },
 	};
 	return (
-		<div className="mx-auto max-w-7xl sm:py-12 lg:flex lg:items-start lg:gap-x-10 px-4 sm:px-0 mt-8 sm:mt-0">
-			<div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
+		<div className="mx-auto max-w-full lg:flex lg:items-start lg:gap-x-10 px-4 sm:px-0">
+			<div className="lg:mx-0 lg:flex-auto">
 				<div className="mx-auto sm:text-left">
 					<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
 						Roadmap
