@@ -8,7 +8,7 @@ export function ContestVoteCta() {
 		<div className="relative isolate text-center">
 			<Link
 				target="_blank"
-				href={"https://x.com/needim"}
+				href={"https://x.com/needim/status/1820345338764394754"}
 				className="z-10 items-center justify-center inline-flex"
 			>
 				<AnimatedGradientText>
