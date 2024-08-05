@@ -1,3 +1,4 @@
+import Logo from "@/components/custom/logo";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -12,6 +13,7 @@ export function HeaderCta() {
 				"group relative rounded-full",
 			)}
 		>
+			<Logo className="size-6 mr-2 -ml-1 sm:hidden" />
 			<span>Launch App</span>
 			<div className="relative ml-1 h-5 w-5 overflow-hidden">
 				<div className="absolute transition-all duration-200 group-hover:-translate-y-5 group-hover:translate-x-4">

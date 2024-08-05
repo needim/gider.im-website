@@ -10,7 +10,7 @@ export function HeaderTop() {
 					<Link target="_blank" href="https://ned.im">
 						Nedim Arabacı.
 					</Link>
-					<span className="font-serif sm:ml-2 sm:inline block">
+					<span className="font-serif sm:ml-2 sm:inline block tracking-wide">
 						I care about your privacy.
 					</span>
 				</span>

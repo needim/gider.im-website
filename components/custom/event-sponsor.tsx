@@ -11,7 +11,14 @@ export function EventSponsor({
 	tooltip,
 	avatar,
 	platform,
-}: { username: string; tooltip: string; avatar?: string; platform: string }) {
+	className,
+}: {
+	username: string;
+	tooltip: string;
+	avatar?: string;
+	platform: string;
+	className?: string;
+}) {
 	return (
 		<Tooltip key={username}>
 			<TooltipContent>
@@ -30,7 +37,12 @@ export function EventSponsor({
 					)}
 					rel="noreferrer"
 				>
-					<Avatar className="ring size-10 ring-white dark:ring-zinc-950">
+					<Avatar
+						className={cn(
+							"ring size-10 ring-white dark:ring-zinc-950",
+							className,
+						)}
+					>
 						<AvatarImage
 							src={
 								avatar || `https://avatars.githubusercontent.com/${username}`

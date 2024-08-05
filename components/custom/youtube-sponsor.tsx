@@ -3,7 +3,7 @@ import Link from "next/link";
 export function YoutubeSponsor() {
 	return (
 		<div className="flex justify-center items-center mb-0.5 mt-4">
-			<div className="border rounded-full bg-white dark:bg-zinc-950 pr-3 font-serif pl-3 h-[40px] flex items-center justify-center text-sm leading-none z-10 whitespace-nowrap">
+			<div className="border rounded-full bg-white dark:bg-zinc-950 pr-3 font-serif tracking-wide pl-3 h-[40px] flex items-center justify-center text-sm leading-none z-10 whitespace-nowrap">
 				<span className="relative -top-[1px]">YouTube Sponsor</span>
 			</div>
 			<Link

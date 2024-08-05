@@ -120,7 +120,7 @@ const secondRow = MONTHLY_SPONSORS.slice(MONTHLY_SPONSORS.length / 2);
 
 export function Supporters() {
 	return (
-		<TooltipProvider delayDuration={0} skipDelayDuration={0}>
+		<TooltipProvider delayDuration={200} skipDelayDuration={0}>
 			<YoutubeSponsor />
 			<SponsorBadge count={MONTHLY_SPONSORS.length + EVENT_SPONSORS.length} />
 

@@ -5,11 +5,11 @@ export function CorporateSponsors() {
 	return (
 		<div className="mt-2 mb-2">
 			<div className="rounded-lg overflow-hidden">
-				<div className="mx-auto max-w-md">
+				<div className="mx-auto max-w-2xl">
 					<div className="grid grid-cols-4 gap-0.5 overflow-hidden">
 						<a
 							href="https://birdefter.com?utm_source=giderim"
-							className="bg-zinc-100/75 dark:bg-zinc-900 p-4 px-6 flex items-center col-span-2"
+							className="bg-zinc-100/75 dark:bg-zinc-900 p-4 px-6 flex items-center col-span-1"
 						>
 							<svg
 								width="3.78em"
@@ -54,7 +54,7 @@ export function CorporateSponsors() {
 
 						<a
 							href={SPONSOR_LINK}
-							className="bg-zinc-100/75 group dark:bg-zinc-900 flex p-1 items-center col-span-2"
+							className="bg-zinc-100/75 group dark:bg-zinc-900 flex p-1 items-center col-span-1"
 						>
 							<Image
 								className="w-full rounded-md object-contain filter grayscale hover:grayscale-0 dark:hover:invert-0 transition-all dark:invert duration-300 ease-in-out"
@@ -67,7 +67,7 @@ export function CorporateSponsors() {
 
 						<a
 							href={SPONSOR_LINK}
-							className="bg-zinc-100/75 dark:bg-zinc-900 flex p-1 items-center col-span-2"
+							className="bg-zinc-100/75 dark:bg-zinc-900 flex p-1 items-center col-span-1"
 						>
 							<Image
 								className="max-h-full w-full rounded-md object-contain filter grayscale hover:grayscale-0 dark:hover:invert-0 transition-all dark:invert duration-300 ease-in-out"
@@ -79,7 +79,7 @@ export function CorporateSponsors() {
 						</a>
 						<a
 							href={SPONSOR_LINK}
-							className="bg-zinc-100/75 dark:bg-zinc-900 flex p-1 items-center col-span-2"
+							className="bg-zinc-100/75 dark:bg-zinc-900 flex p-1 items-center col-span-1"
 						>
 							<Image
 								className="max-h-full w-full rounded-md object-contain filter grayscale hover:grayscale-0 dark:hover:invert-0 transition-all dark:invert duration-300 ease-in-out"
