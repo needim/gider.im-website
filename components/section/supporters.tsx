@@ -80,6 +80,12 @@ const MONTHLY_SPONSORS = [
 	{
 		username: "alpererdogan8",
 	},
+	{
+		username: "aorhandev",
+	},
+	{
+		username: "mhasanince",
+	},
 ];
 
 const EVENT_SPONSORS = [
