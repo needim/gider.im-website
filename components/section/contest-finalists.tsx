@@ -1,25 +1,21 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 export function ContestFinalists() {
 	const finalists = [
 		{
-			name: "Ceren",
-			xHandle: "unwritten_",
+			badge: "trophy.png",
+			name: "Sedef",
+			xHandle: "sedefhcylmz1",
 			avatarUrl:
-				"https://pbs.twimg.com/profile_images/830122878704168960/eK_iIkOD_400x400.jpg",
-			imageUrl: "/contest/ceren.png",
-			figmaUrl: "https://fig.page/ceren",
+				"https://pbs.twimg.com/profile_images/1280939973018112000/UNEDyCg1_400x400.jpg",
+			imageUrl: "/contest/sedef.png",
+			figmaUrl: "https://fig.page/sedef",
 		},
 		{
-			name: "Numan",
-			avatarUrl:
-				"https://pbs.twimg.com/profile_images/1769398336098844672/7IZRhHNE_400x400.jpg",
-			imageUrl: "/contest/numan.png",
-			figmaUrl: "https://fig.page/numan",
-			xHandle: "numanguness",
-		},
-		{
+			badge: "silver-medal.png",
 			name: "Oktay",
 			avatarUrl:
 				"https://pbs.twimg.com/profile_images/1804890323736231936/x-fgnRKp_400x400.jpg",
@@ -28,12 +24,23 @@ export function ContestFinalists() {
 			figmaUrl: "https://fig.page/oktay",
 		},
 		{
-			name: "Sedef",
-			xHandle: "sedefhcylmz1",
+			badge: "bronze-medal.png",
+			name: "Ceren",
+			xHandle: "unwritten_",
 			avatarUrl:
-				"https://pbs.twimg.com/profile_images/1280939973018112000/UNEDyCg1_400x400.jpg",
-			imageUrl: "/contest/sedef.png",
-			figmaUrl: "https://fig.page/sedef",
+				"https://pbs.twimg.com/profile_images/830122878704168960/eK_iIkOD_400x400.jpg",
+			imageUrl: "/contest/ceren.png",
+			figmaUrl: "https://fig.page/ceren",
+		},
+		{
+			badge: "trophy-4.png",
+			className: "grayscale",
+			name: "Numan",
+			avatarUrl:
+				"https://pbs.twimg.com/profile_images/1769398336098844672/7IZRhHNE_400x400.jpg",
+			imageUrl: "/contest/numan.png",
+			figmaUrl: "https://fig.page/numan",
+			xHandle: "numanguness",
 		},
 	];
 
@@ -41,6 +48,13 @@ export function ContestFinalists() {
 		<div className="py-12 sm:py-14 max-w-5xl mx-auto">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto max-w-2xl text-center">
+					<Image
+						src="/contest-icons/podium.png"
+						alt="Contest"
+						width={128}
+						height={128}
+						className="mx-auto mb-4"
+					/>
 					<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
 						Contest Finalists
 					</h2>
@@ -60,12 +74,14 @@ export function ContestFinalists() {
 								target="_blank"
 								className="mx-auto relative"
 							>
-								<img
+								<Image
 									alt=""
+									width={208}
+									height={432}
 									src={person.imageUrl}
 									className="w-52 flex-none rounded-2xl object-top object-cover grayscale group-hover:grayscale-0 transition-filter duration-300"
 								/>
-								<div className="absolute -bottom-px w-full pb-20 pt-56 bg-gradient-to-t dark:from-zinc-950 from-white dark:via-zinc-900/80 via-zinc-300/80 to-transparent rounded-b-[32px] transition-opacity group-hover:opacity-90 duration-150">
+								<div className="absolute -bottom-px w-full pb-6 pt-56 bg-gradient-to-t dark:from-zinc-950 from-white dark:via-zinc-900/80 via-zinc-300/80 to-transparent rounded-b-[32px] transition-opacity group-hover:opacity-90 duration-150">
 									<div className="flex flex-col items-center">
 										<svg
 											width="54"
@@ -104,6 +120,15 @@ export function ContestFinalists() {
 											</defs>
 										</svg>
 										Preview on Figma
+									</div>
+									<div className="mt-4 text-center">
+										<Image
+											src={`/contest-icons/${person.badge}`}
+											alt="Medal"
+											width={72}
+											height={72}
+											className={cn("mx-auto", person.className)}
+										/>
 									</div>
 								</div>
 							</Link>

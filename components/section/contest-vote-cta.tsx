@@ -18,7 +18,7 @@ export function ContestVoteCta() {
 							"inline animate-gradient bg-gradient-to-r from-sky-900 dark:from-sky-200 via-sky-600 dark:via-white to-sky-900 dark:to-sky-200 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent text-xl font-semibold py-1",
 						)}
 					>
-						Vote on X platform
+						Voted on X platform
 					</span>
 				</AnimatedGradientText>
 			</Link>

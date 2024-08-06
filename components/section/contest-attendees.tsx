@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 
 export function ContestAttendees() {
 	const featuredAttendee = {
@@ -167,8 +168,10 @@ export function ContestAttendees() {
 							href={`https://x.com/${featuredAttendee.user.handle}`}
 							className="flex flex-wrap items-center gap-x-4 gap-y-4 border-b border-zinc-900/10 dark:border-zinc-100/10 px-6 py-4 sm:flex-nowrap hover:underline"
 						>
-							<img
+							<Image
 								alt=""
+								width={40}
+								height={40}
 								src={featuredAttendee.user.imageUrl}
 								className="h-10 w-10 flex-none rounded-full bg-gray-50"
 							/>

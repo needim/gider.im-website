@@ -3,13 +3,17 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'avatars.githubusercontent.com',
-        port: '',
-        // pathname: '/account123/**',
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        port: "",
       },
-    ]
-  }
+      {
+        protocol: "https",
+        hostname: "pbs.twimg.com",
+        port: "",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
