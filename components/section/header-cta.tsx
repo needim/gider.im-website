@@ -10,7 +10,7 @@ export function HeaderCta() {
 			target="_blank"
 			className={cn(
 				buttonVariants({ variant: "default" }),
-				"group relative rounded-full",
+				"group relative rounded-2xl",
 			)}
 		>
 			<Logo className="size-6 mr-2 -ml-1 sm:hidden" />

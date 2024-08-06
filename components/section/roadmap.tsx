@@ -2,7 +2,9 @@
 
 import { RoadmapAchievement } from "@/components/custom/roadmap-achievement";
 import { cn } from "@/lib/utils";
+import { IconArrowRight } from "@tabler/icons-react";
 import { type Variants, motion } from "framer-motion";
+import Link from "next/link";
 
 // TODO: progreess visualisation calculation needs a fix
 
@@ -36,7 +38,25 @@ const ROADMAP_ITEMS = [
 		],
 	},
 	{
-		date: "30 July, 2024",
+		date: "23 July - 6 August 2024",
+		progress: 100,
+		icon: "🏆",
+		title: "Design Contest",
+		description: "Design contest for the gider.im app.",
+		achievements: [
+			{ title: "Design contest announcement.", completed: true },
+			{ title: "Design contest entries.", completed: true },
+			{ title: "Design contest winners.", completed: true },
+		],
+		footer: (
+			<Link href="/design">
+				View the winners{" "}
+				<IconArrowRight className="size-4 ml-0.5 inline-block" />
+			</Link>
+		),
+	},
+	{
+		date: "30 August, 2024",
 		progress: 10,
 		icon: "🔄",
 		title: "Sync & Backup",
@@ -49,7 +69,7 @@ const ROADMAP_ITEMS = [
 		],
 	},
 	{
-		date: "30 August, 2024",
+		date: "30 September, 2024",
 		progress: 0,
 		icon: "✨",
 		title: "Overview & Visual Stats",
@@ -59,7 +79,7 @@ const ROADMAP_ITEMS = [
 		],
 	},
 	{
-		date: "30 September, 2024",
+		date: "30 October, 2024",
 		progress: 0,
 		icon: "💎",
 		title: "Assets & Budgets",
@@ -71,7 +91,7 @@ const ROADMAP_ITEMS = [
 		],
 	},
 	{
-		date: "30 October, 2024",
+		date: "30 November, 2024",
 		progress: 0,
 		icon: (
 			<svg
@@ -99,7 +119,7 @@ const ROADMAP_ITEMS = [
 	},
 	{
 		progress: 0,
-		date: "30 November, 2024",
+		date: "30 December, 2024",
 		icon: "📱",
 		title: "iOS Widgets",
 		description: "Separate app",
@@ -162,6 +182,10 @@ export default function Roadmap() {
 								{roadmap_item.achievements.map((achievement, index) => (
 									<RoadmapAchievement key={index} {...achievement} />
 								))}
+
+								{roadmap_item.footer && (
+									<p className="my-2">{roadmap_item.footer}</p>
+								)}
 							</div>
 						</motion.div>
 					))}

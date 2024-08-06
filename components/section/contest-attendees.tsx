@@ -218,8 +218,10 @@ export function ContestAttendees() {
 												href={`https://x.com/${testimonial.user.handle}`}
 												className="mb-4  flex items-center gap-x-4 hover:underline"
 											>
-												<img
+												<Image
 													alt=""
+													width={40}
+													height={40}
 													src={testimonial.user.imageUrl}
 													className="h-10 w-10 rounded-full bg-gray-50"
 												/>

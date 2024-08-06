@@ -46,7 +46,7 @@ export function MainNav() {
 				<Link href="/roadmap" className="z-10 flex items-center justify-center">
 					<div
 						className={cn(
-							"group rounded-full text-base font-medium transition-all ease-in hover:cursor-pointer hover:bg-zinc-200  dark:hover:bg-zinc-800",
+							"group rounded-2xl text-base font-medium transition-all ease-in hover:cursor-pointer hover:bg-zinc-200  dark:hover:bg-zinc-800",
 							segment === "roadmap" ? "bg-zinc-100 dark:bg-zinc-900" : "",
 						)}
 					>
@@ -58,7 +58,7 @@ export function MainNav() {
 				<Link href="/design" className="z-10 flex items-center justify-center">
 					<div
 						className={cn(
-							"group rounded-full text-base font-medium transition-all ease-in hover:cursor-pointer hover:bg-zinc-200  dark:hover:bg-zinc-800",
+							"group rounded-2xl text-base font-medium transition-all ease-in hover:cursor-pointer hover:bg-zinc-200  dark:hover:bg-zinc-800",
 							segment === "design" ? "bg-zinc-100 dark:bg-zinc-900" : "",
 						)}
 					>

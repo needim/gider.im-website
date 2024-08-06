@@ -1,7 +1,6 @@
 import { CorporateSponsors } from "@/components/section/corporate-sponsors";
 import { Features } from "@/components/section/features";
 import { Hero } from "@/components/section/hero";
-import Roadmap from "@/components/section/roadmap";
 
 export default function Home() {
 	return (

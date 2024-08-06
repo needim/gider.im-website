@@ -81,7 +81,7 @@ export function ContestFinalists() {
 									src={person.imageUrl}
 									className="w-52 flex-none rounded-2xl object-top object-cover grayscale group-hover:grayscale-0 transition-filter duration-300"
 								/>
-								<div className="absolute -bottom-px w-full pb-6 pt-56 bg-gradient-to-t dark:from-zinc-950 from-white dark:via-zinc-900/80 via-zinc-300/80 to-transparent rounded-b-[32px] transition-opacity group-hover:opacity-90 duration-150">
+								<div className="absolute -bottom-px w-full pb-6 pt-56 bg-gradient-to-t dark:from-zinc-950 from-white dark:via-zinc-900/80 via-zinc-300/80 to-transparent rounded-b-[32px]">
 									<div className="flex flex-col items-center">
 										<svg
 											width="54"

@@ -1,3 +1,4 @@
+import { SupportCta } from "@/components/section/support-cta";
 import { Supporters } from "@/components/section/supporters";
 import Image from "next/image";
 
@@ -8,6 +9,7 @@ export function Hero() {
 				Privacy focused income & expense tracking app.
 			</h1>
 			<Supporters />
+			<SupportCta className="mb-6" />
 			<Image
 				alt="Giderim App"
 				priority

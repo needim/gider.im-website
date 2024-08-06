@@ -1,6 +1,5 @@
 import { EventSponsor } from "@/components/custom/event-sponsor";
 import { Sponsor } from "@/components/custom/sponsor";
-import { SponsorBadge } from "@/components/custom/sponsor-badge";
 import { YoutubeSponsor } from "@/components/custom/youtube-sponsor";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
@@ -102,7 +101,7 @@ const EVENT_SPONSORS = [
 		tooltip: "Eser Özvataf",
 		platform: "twitter",
 		avatar:
-			"https://pbs.twimg.com/profile_images/1812738529056673792/l8CGDu52_400x400.jpg",
+			"https://pbs.twimg.com/profile_images/1819797393073635328/UP1147WV_400x400.jpg",
 	},
 	{
 		username: "oguzyagizkara",
@@ -130,8 +129,9 @@ const secondRow = MONTHLY_SPONSORS.slice(MONTHLY_SPONSORS.length / 2);
 export function Supporters() {
 	return (
 		<TooltipProvider delayDuration={200} skipDelayDuration={0}>
-			<YoutubeSponsor />
-			<SponsorBadge count={MONTHLY_SPONSORS.length + EVENT_SPONSORS.length} />
+			<h2 className="text-lg font-semibold text-center mb-2">
+				Supported by {MONTHLY_SPONSORS.length + EVENT_SPONSORS.length} people
+			</h2>
 
 			<div className="flex justify-center -mb-0.5 max-w-sm mx-auto flex-wrap">
 				{firstRow.map((sponsor) => (
@@ -151,6 +151,7 @@ export function Supporters() {
 					<EventSponsor key={sponsor.username} {...sponsor} />
 				))}
 			</div>
+			<YoutubeSponsor />
 		</TooltipProvider>
 	);
 }

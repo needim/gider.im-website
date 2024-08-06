@@ -1,13 +1,17 @@
 import { ContestAttendees } from "@/components/section/contest-attendees";
 import { ContestFinalists } from "@/components/section/contest-finalists";
 import { ContestVoteCta } from "@/components/section/contest-vote-cta";
+import { SupportCta } from "@/components/section/support-cta";
 import { Supporters } from "@/components/section/supporters";
 
 export default function Home() {
 	return (
 		<>
 			<ContestFinalists />
-			<ContestVoteCta />
+			<div className="flex items-center justify-center gap-3 flex-col sm:flex-row">
+				<ContestVoteCta />
+				<SupportCta />
+			</div>
 			<div className="mt-12">
 				<Supporters />
 			</div>
