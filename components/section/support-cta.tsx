@@ -20,7 +20,7 @@ export function SupportCta({ className }: { className?: string }) {
 					>
 						Support this project{" "}
 					</span>
-					<IconChevronRight className=" ml-1 text-red-600 dark:text-red-50 group-hover:ml-2 transition-all" />
+					<IconChevronRight className=" ml-1 text-red-600 dark:text-red-100 group-hover:ml-2 transition-all" />
 				</AnimatedGradientSponsorText>
 			</Link>
 		</div>
