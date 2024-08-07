@@ -7,6 +7,7 @@ export function ContestFinalists() {
 	const finalists = [
 		{
 			badge: "trophy.png",
+			earns: "₺18.500",
 			name: "Sedef",
 			xHandle: "sedefhcylmz1",
 			avatarUrl:
@@ -16,6 +17,7 @@ export function ContestFinalists() {
 		},
 		{
 			badge: "silver-medal.png",
+			earns: "₺13.500",
 			name: "Oktay",
 			avatarUrl:
 				"https://pbs.twimg.com/profile_images/1804890323736231936/x-fgnRKp_400x400.jpg",
@@ -25,6 +27,7 @@ export function ContestFinalists() {
 		},
 		{
 			badge: "bronze-medal.png",
+			earns: "₺10.500",
 			name: "Ceren",
 			xHandle: "unwritten_",
 			avatarUrl:
@@ -34,6 +37,7 @@ export function ContestFinalists() {
 		},
 		{
 			badge: "trophy-4.png",
+			earns: "₺7.500",
 			className: "grayscale",
 			name: "Numan",
 			avatarUrl:
@@ -58,9 +62,9 @@ export function ContestFinalists() {
 					<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
 						Contest Finalists
 					</h2>
-					<p className="mt-2 text-lg leading-8 text-muted-foreground text-balance">
-						Top 4 designs from the gider.im app design competition. View the
-						designs on Figma and vote for your favorite design.
+					<p className="mt-2 text-lg leading-7 text-muted-foreground text-balance">
+						Top 4 designs from the gider.im app design competition. Competition
+						is over and the winners are announced.
 					</p>
 				</div>
 				<ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-2 gap-y-20 sm:grid-cols-4 lg:max-w-4xl lg:gap-x-2 xl:max-w-none">
@@ -129,6 +133,9 @@ export function ContestFinalists() {
 											height={72}
 											className={cn("mx-auto", person.className)}
 										/>
+										<p className="text-2xl mt-2 tracking-tight text-zinc-900 dark:text-zinc-300 relative">
+											{person.earns}
+										</p>
 									</div>
 								</div>
 							</Link>
