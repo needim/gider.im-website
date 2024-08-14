@@ -22,7 +22,7 @@ export function ActiveGoal({
 				</div>
 				<div className="mt-1 text-xs font-medium text-gray-600">
 					<div className="text-muted-foreground whitespace-nowrap">
-						{firstMonthlySponsor?.login} and {monthlySponsorCount} others
+						{firstMonthlySponsor?.login} and {monthlySponsorCount - 1} others
 						sponsor this goal
 					</div>
 				</div>
