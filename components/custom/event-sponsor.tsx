@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 export function EventSponsor({
 	username,
 	tooltip,
-	avatar,
 	platform,
 	className,
 }: {
@@ -21,8 +20,9 @@ export function EventSponsor({
 }) {
 	return (
 		<Tooltip key={username}>
-			<TooltipContent>
+			<TooltipContent className="text-center">
 				<p>{tooltip}</p>
+				<p className="text-xs text-muted-foreground">@{username}</p>
 			</TooltipContent>
 			<TooltipTrigger asChild>
 				<a
@@ -45,7 +45,9 @@ export function EventSponsor({
 					>
 						<AvatarImage
 							src={
-								avatar || `https://avatars.githubusercontent.com/${username}`
+								platform === "github"
+									? `https://avatars.githubusercontent.com/${username}`
+									: `https://unavatar.io/x/${username}`
 							}
 						/>
 					</Avatar>

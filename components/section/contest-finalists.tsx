@@ -1,7 +1,7 @@
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
 
 export function ContestFinalists() {
 	const finalists = [
@@ -10,8 +10,6 @@ export function ContestFinalists() {
 			earns: "₺18.500",
 			name: "Sedef",
 			xHandle: "sedefhcylmz1",
-			avatarUrl:
-				"https://pbs.twimg.com/profile_images/1280939973018112000/UNEDyCg1_400x400.jpg",
 			imageUrl: "/contest/sedef.png",
 			figmaUrl: "https://fig.page/sedef",
 		},
@@ -19,8 +17,6 @@ export function ContestFinalists() {
 			badge: "silver-medal.png",
 			earns: "₺13.500",
 			name: "Oktay",
-			avatarUrl:
-				"https://pbs.twimg.com/profile_images/1804890323736231936/x-fgnRKp_400x400.jpg",
 			xHandle: "Okcaworkshop",
 			imageUrl: "/contest/oktay.png",
 			figmaUrl: "https://fig.page/oktay",
@@ -30,8 +26,6 @@ export function ContestFinalists() {
 			earns: "₺10.500",
 			name: "Ceren",
 			xHandle: "unwritten_",
-			avatarUrl:
-				"https://pbs.twimg.com/profile_images/830122878704168960/eK_iIkOD_400x400.jpg",
 			imageUrl: "/contest/ceren.png",
 			figmaUrl: "https://fig.page/ceren",
 		},
@@ -40,8 +34,6 @@ export function ContestFinalists() {
 			earns: "₺7.500",
 			className: "grayscale",
 			name: "Numan",
-			avatarUrl:
-				"https://pbs.twimg.com/profile_images/1769398336098844672/7IZRhHNE_400x400.jpg",
 			imageUrl: "/contest/numan.png",
 			figmaUrl: "https://fig.page/numan",
 			xHandle: "numanguness",
@@ -141,6 +133,13 @@ export function ContestFinalists() {
 							</Link>
 							<div className="flex-auto group-hover:translate-y-4 transition-transform duration-500">
 								<h3 className="text-lg font-semibold leading-8 tracking-tight flex flex-col">
+									<Image
+										alt=""
+										width={40}
+										height={40}
+										src={`https://unavatar.io/x/${person.xHandle}`}
+										className="h-10 w-10 rounded-full bg-gray-50 mx-auto"
+									/>
 									<span>{person.name}</span>
 									<span className="text-sm font-normal">@{person.xHandle}</span>
 								</h3>

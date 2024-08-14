@@ -3,12 +3,12 @@
 import Link from "next/link";
 
 import Logo from "@/components/custom/logo";
+import { MobileNav } from "@/components/section/mobile-nav";
 import { cn } from "@/lib/utils";
+import { IconHeartFilled, IconMenu2, IconX } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useSelectedLayoutSegment } from "next/navigation";
 import { useEffect, useState } from "react";
-import { IconMenu2, IconX } from "@tabler/icons-react";
-import { MobileNav } from "@/components/section/mobile-nav";
 
 export type MainNavItem = {
 	title: string;
@@ -64,6 +64,24 @@ export function MainNav() {
 					>
 						<div className="inline-flex items-center justify-center px-3 py-1.5 transition ease-out hover:text-zinc-600 hover:duration-300 hover:dark:text-zinc-400">
 							<span>Design Contest</span>
+						</div>
+					</div>
+				</Link>
+				<Link
+					href="/sponsorship"
+					className="z-10 flex items-center justify-center"
+				>
+					<div
+						className={cn(
+							"group rounded-2xl text-base font-medium transition-all ease-in hover:cursor-pointer hover:bg-zinc-200  dark:hover:bg-zinc-800",
+							segment === "sponsorship" ? "bg-zinc-100 dark:bg-zinc-900" : "",
+						)}
+					>
+						<div className="inline-flex items-center justify-center px-3 py-1.5 transition ease-out hover:text-zinc-600 hover:duration-300 hover:dark:text-zinc-400">
+							<span>
+								Sponsorships{" "}
+								<IconHeartFilled className="text-red-600 dark:text-red-400 inline" />
+							</span>
 						</div>
 					</div>
 				</Link>

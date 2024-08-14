@@ -1,157 +1,94 @@
 import { EventSponsor } from "@/components/custom/event-sponsor";
 import { Sponsor } from "@/components/custom/sponsor";
 import { YoutubeSponsor } from "@/components/custom/youtube-sponsor";
-import { TooltipProvider } from "@/components/ui/tooltip";
-
-const MONTHLY_SPONSORS = [
-	{
-		username: "aliosmandev",
-	},
-	{
-		username: "giraybatiturk",
-	},
-	{
-		username: "adiguzelburak",
-	},
-	{
-		username: "eser",
-	},
-	{
-		username: "evrenvural",
-	},
-	{
-		username: "calganaygun",
-	},
-	{
-		username: "mehmetaltugakgul",
-	},
-	{
-		username: "meminuygur",
-	},
-	{
-		username: "aardabayram",
-	},
-	{
-		username: "aykutkardas",
-	},
-	{
-		username: "kanadikirik",
-	},
-	{
-		username: "thisisroi",
-	},
-	{
-		username: "kacmazm",
-	},
-	{
-		username: "MATTAM540",
-	},
-	{
-		username: "komunite",
-	},
-	{
-		username: "mahmutyildizx",
-	},
-	{
-		username: "kemalersin",
-	},
-	{
-		username: "islamsanliturk",
-	},
-	{
-		username: "isikmuhamm",
-	},
-	{
-		username: "uygar",
-	},
-	{
-		username: "apo-bozdag",
-	},
-	{
-		username: "serhatkildaci",
-	},
-	{
-		username: "alperiskender",
-	},
-	{
-		username: "alimuratumutlu",
-	},
-	{
-		username: "alpererdogan8",
-	},
-	{
-		username: "aorhandev",
-	},
-	{
-		username: "mhasanince",
-	},
-	{
-		username: "mvpstudioco",
-	},
-];
+import { getGithubInfo } from "@/server/github";
 
 const EVENT_SPONSORS = [
 	{
 		username: "9ssi7",
 		tooltip: "Sami Salih İbrahimbaş",
 		platform: "github",
+		includeInTotal: false,
 	},
 	{
 		username: "eserozvataf",
 		tooltip: "Eser Özvataf",
 		platform: "twitter",
-		avatar:
-			"https://pbs.twimg.com/profile_images/1819797393073635328/UP1147WV_400x400.jpg",
+		includeInTotal: false,
 	},
 	{
 		username: "oguzyagizkara",
 		tooltip: "Oğuz Yağız Kara",
 		platform: "twitter",
-		avatar:
-			"https://pbs.twimg.com/profile_images/1799141903272710144/XhujOrEi_400x400.jpg",
+		includeInTotal: true,
 	},
 	{
 		username: "batuhankrskl",
 		tooltip: "Batuhan Karasakal",
 		platform: "github",
+		includeInTotal: false,
 	},
 	{
 		username: "ugorur",
 		tooltip: "Umurcan Görür",
-		platform: "twitter",
-		avatar:
-			"https://pbs.twimg.com/profile_images/1741572315874226176/QaNQfZpS_400x400.jpg",
+		platform: "github",
+		includeInTotal: false,
 	},
 ];
-const firstRow = MONTHLY_SPONSORS.slice(0, MONTHLY_SPONSORS.length / 2);
-const secondRow = MONTHLY_SPONSORS.slice(MONTHLY_SPONSORS.length / 2);
 
-export function Supporters() {
+export async function Supporters() {
+	const githubResponse = await getGithubInfo();
+	const allSupporters = githubResponse.data.viewer.sponsors.nodes.sort(
+		(a, b) =>
+			new Date(a.sponsorshipForViewerAsSponsorable.createdAt).getTime() >
+			new Date(b.sponsorshipForViewerAsSponsorable.createdAt).getTime()
+				? 1
+				: -1,
+	);
+
+	const chunks = allSupporters.reduce((resultArray, item, index) => {
+		const chunkIndex = Math.floor(index / 12);
+
+		if (!resultArray[chunkIndex]) {
+			resultArray[chunkIndex] = [];
+		}
+
+		resultArray[chunkIndex].push(item);
+
+		return resultArray;
+	}, [] as SponsorsNode[][]);
+
 	return (
-		<TooltipProvider delayDuration={200} skipDelayDuration={0}>
-			<h2 className="text-lg font-semibold text-center mb-2">
-				Supported by {MONTHLY_SPONSORS.length + EVENT_SPONSORS.length} people
+		<>
+			<h2 className="text-lg text-center mb-2">
+				Supported by{" "}
+				<span className="underline-doodle font-semibold">
+					{githubResponse.data.viewer.sponsors.totalCount +
+						EVENT_SPONSORS.filter((s) => s.includeInTotal).length}{" "}
+					people
+				</span>
 			</h2>
 
-			<div className="flex justify-center -mb-0.5 max-w-sm mx-auto flex-wrap">
-				{firstRow.map((sponsor) => (
-					<Sponsor key={sponsor.username} username={sponsor.username} />
-				))}
-			</div>
+			{chunks.map((chunk, index) => (
+				<div
+					key={index}
+					className="flex justify-center max-w-sm mx-auto flex-wrap"
+				>
+					{chunk.map((sponsor) => (
+						<Sponsor key={sponsor.login} {...sponsor} />
+					))}
+				</div>
+			))}
 
-			<div className="flex justify-center mb-4 max-w-sm mx-auto flex-wrap">
-				{secondRow.map((sponsor) => (
-					<Sponsor key={sponsor.username} username={sponsor.username} />
-				))}
-			</div>
-
-			<h2 className="text-lg font-semibold text-center mb-2">Event Sponsors</h2>
+			<h2 className="text-lg font-semibold text-center mt-4 mb-2">
+				Contest Sponsors
+			</h2>
 			<div className="flex justify-center mb-4 max-w-sm mx-auto flex-wrap">
 				{EVENT_SPONSORS.map((sponsor) => (
 					<EventSponsor key={sponsor.username} {...sponsor} />
 				))}
 			</div>
 			<YoutubeSponsor />
-		</TooltipProvider>
+		</>
 	);
 }

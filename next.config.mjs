@@ -9,7 +9,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "pbs.twimg.com",
+        hostname: "unavatar.io",
         port: "",
       },
     ],

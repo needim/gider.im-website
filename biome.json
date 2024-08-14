@@ -3,9 +3,16 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"include": ["**/*.ts", "**/*.tsx"]
+	},
 	"linter": {
 		"enabled": true,
-		"ignore": ["**/.next/**", "**/node_modules/**", "**/dist/**"],
 		"rules": {
 			"recommended": true,
 			"style": {
@@ -27,7 +34,6 @@
 		}
 	},
 	"formatter": {
-		"enabled": true,
-		"ignore": ["**/.next/**", "**/node_modules/**", "**/dist/**"]
+		"enabled": true
 	}
 }

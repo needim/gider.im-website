@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export function ContestAttendees() {
 	const featuredAttendee = {
@@ -9,8 +9,6 @@ export function ContestAttendees() {
 		user: {
 			name: "Utku Gürbüz",
 			handle: "utkgrb",
-			imageUrl:
-				"https://pbs.twimg.com/profile_images/1813151505660231680/ut7o73AN_400x400.jpg",
 		},
 	};
 	const attendees = [
@@ -22,8 +20,6 @@ export function ContestAttendees() {
 					user: {
 						name: "Mustafa Pekkirişci",
 						handle: "pekkiriscim",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1609598043229229057/kHpti_Uv_400x400.jpg",
 					},
 				},
 				{
@@ -32,8 +28,6 @@ export function ContestAttendees() {
 					user: {
 						name: "Gonca Özkutlu",
 						handle: "gonca_ozkutlu",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1806688002803937280/Lsck8c6Y_400x400.jpg",
 					},
 				},
 				{
@@ -42,8 +36,6 @@ export function ContestAttendees() {
 					user: {
 						name: "Vusal",
 						handle: "vusalamrahov",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1808967041845460992/gIDRUqqS_400x400.jpg",
 					},
 				},
 			],
@@ -54,8 +46,6 @@ export function ContestAttendees() {
 					user: {
 						name: "Tuna Taşmaz",
 						handle: "tunatasmaz",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1783167022341275657/N6XjPsPM_400x400.jpg",
 					},
 				},
 				{
@@ -64,8 +54,6 @@ export function ContestAttendees() {
 					user: {
 						name: "sfi",
 						handle: "sfi_designs",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1799771424900464640/qyBOJ_SY_400x400.jpg",
 					},
 				},
 				{
@@ -74,8 +62,6 @@ export function ContestAttendees() {
 					user: {
 						name: "İlkcan Köse",
 						handle: "ilkcanui",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1797505984388030464/Q_-SKzVF_400x400.jpg",
 					},
 				},
 			],
@@ -88,8 +74,6 @@ export function ContestAttendees() {
 					user: {
 						name: "Vasıf Baran Fidan",
 						handle: "vbfidan",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1766179486263824384/Z_jPVzGk_400x400.jpg",
 					},
 				},
 				{
@@ -98,8 +82,6 @@ export function ContestAttendees() {
 					user: {
 						name: "dls 🦖",
 						handle: "ssylbre",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1644068827511115778/TJGmvmrQ_400x400.jpg",
 					},
 				},
 				{
@@ -107,8 +89,6 @@ export function ContestAttendees() {
 					user: {
 						name: "Bora Mert",
 						handle: "boramertss",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1817598754138001408/clmAnDmI_400x400.jpg",
 					},
 				},
 			],
@@ -119,8 +99,6 @@ export function ContestAttendees() {
 					user: {
 						name: "Buse",
 						handle: "buseturgay",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1633022330971594752/nTz4yPMR_400x400.jpg",
 					},
 				},
 				{
@@ -129,8 +107,6 @@ export function ContestAttendees() {
 					user: {
 						name: "Aykut Korkmaz",
 						handle: "AykutKorkmazX",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1740832435552550912/BS8wftL-_400x400.jpg",
 					},
 				},
 				{
@@ -139,8 +115,6 @@ export function ContestAttendees() {
 					user: {
 						name: "Elif",
 						handle: "sewepsiz",
-						imageUrl:
-							"https://pbs.twimg.com/profile_images/1614369178785398787/ve2LpiWq_400x400.jpg",
 					},
 				},
 			],
@@ -172,7 +146,7 @@ export function ContestAttendees() {
 								alt=""
 								width={40}
 								height={40}
-								src={featuredAttendee.user.imageUrl}
+								src={`https://unavatar.io/x/${featuredAttendee.user.handle}`}
 								className="h-10 w-10 flex-none rounded-full bg-gray-50"
 							/>
 							<div className="flex-auto">
@@ -222,7 +196,7 @@ export function ContestAttendees() {
 													alt=""
 													width={40}
 													height={40}
-													src={testimonial.user.imageUrl}
+													src={`https://unavatar.io/x/${testimonial.user.handle}`}
 													className="h-10 w-10 rounded-full bg-gray-50"
 												/>
 												<div>

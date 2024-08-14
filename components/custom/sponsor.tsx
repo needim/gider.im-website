@@ -6,24 +6,25 @@ import {
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
-export function Sponsor({ username }: { username: string }) {
+export function Sponsor({ login, name }: SponsorsNode) {
 	return (
-		<Tooltip key={username}>
-			<TooltipContent>
-				<p>{username}</p>
+		<Tooltip key={login}>
+			<TooltipContent className="text-center">
+				<p>{name}</p>
+				<p className="text-xs text-muted-foreground">@{login}</p>
 			</TooltipContent>
 			<TooltipTrigger asChild>
 				<a
 					target="_blank"
-					href={`https://github.com/${username}`}
+					href={`https://github.com/${login}`}
 					className={cn(
 						"transition-all -mx-1.5 sm:-mx-0.5 hover:mx-1.5 delay-200",
 					)}
 					rel="noreferrer"
 				>
-					<Avatar className="ring ring-white dark:ring-zinc-950">
+					<Avatar className="ring size-8 ring-white dark:ring-zinc-950">
 						<AvatarImage
-							src={`https://avatars.githubusercontent.com/${username}`}
+							src={`https://avatars.githubusercontent.com/${login}`}
 						/>
 					</Avatar>
 				</a>

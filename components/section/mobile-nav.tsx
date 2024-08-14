@@ -1,9 +1,9 @@
-import type * as React from "react";
 import Link from "next/link";
+import type * as React from "react";
 
-import { cn } from "@/lib/utils";
-import { useLockBody } from "@/hooks/use-lock-body";
 import Logo from "@/components/custom/logo";
+import { useLockBody } from "@/hooks/use-lock-body";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 interface MobileNavProps {
@@ -51,6 +51,14 @@ export function MobileNav({ children }: MobileNavProps) {
 						)}
 					>
 						Design Contest
+					</Link>
+					<Link
+						href="/sponsorship"
+						className={cn(
+							"flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
+						)}
+					>
+						Sponsorship
 					</Link>
 				</nav>
 				{children}
