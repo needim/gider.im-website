@@ -14,7 +14,7 @@ export function ActiveGoal({
 				{goal.percentComplete}% towards {goal.targetValue} monthly sponsors goal
 			</p>
 			<div aria-hidden="true" className="mt-1">
-				<div className="overflow-hidden rounded-full bg-zinc-200">
+				<div className="overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-700">
 					<div
 						style={{ width: "13%" }}
 						className="h-2 rounded-full sponsors-goal-progress-bar bg-[#ec6cb9]"
