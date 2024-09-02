@@ -38,13 +38,12 @@ const EVENT_SPONSORS = [
 
 export async function Supporters() {
 	const githubResponse = await getGithubInfo();
-	const allSupporters = githubResponse.data.viewer.sponsors.nodes.sort(
-		(a, b) =>
-			new Date(a.sponsorshipForViewerAsSponsorable.createdAt).getTime() >
-			new Date(b.sponsorshipForViewerAsSponsorable.createdAt).getTime()
+	const allSupporters =
+		githubResponse.data.viewer.sponsorshipsAsMaintainer.nodes.sort((a, b) =>
+			new Date(a.createdAt).getTime() > new Date(b.createdAt).getTime()
 				? 1
 				: -1,
-	);
+		);
 
 	const chunks = allSupporters.reduce((resultArray, item, index) => {
 		const chunkIndex = Math.floor(index / 12);
@@ -56,14 +55,14 @@ export async function Supporters() {
 		resultArray[chunkIndex].push(item);
 
 		return resultArray;
-	}, [] as SponsorsNode[][]);
+	}, [] as SponsorshipsAsMaintainerNode[][]);
 
 	return (
 		<>
 			<h2 className="text-lg text-center mb-2">
 				Supported by{" "}
 				<span className="underline-doodle font-semibold">
-					{githubResponse.data.viewer.sponsors.totalCount +
+					{githubResponse.data.viewer.sponsorshipsAsMaintainer.totalCount +
 						EVENT_SPONSORS.filter((s) => s.includeInTotal).length}{" "}
 					people
 				</span>
@@ -75,7 +74,10 @@ export async function Supporters() {
 					className="flex justify-center max-w-sm mx-auto flex-wrap"
 				>
 					{chunk.map((sponsor) => (
-						<Sponsor key={sponsor.login} {...sponsor} />
+						<Sponsor
+							key={sponsor.sponsorEntity.login}
+							{...sponsor.sponsorEntity}
+						/>
 					))}
 				</div>
 			))}

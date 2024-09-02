@@ -36,23 +36,23 @@ export function SponsorshipsTiers({
 		{ oneTime: [] as TierElement[], recurring: [] as TierElement[] },
 	);
 
-	function getSponsorsByTier(tierId: string) {
-		return githubResponse.data.viewer.sponsors.nodes.filter(
-			(sponsor) => sponsor.sponsorshipForViewerAsSponsorable.tier.id === tierId,
-		);
-	}
+	// function getSponsorsByTier(tierId: string) {
+	// 	return githubResponse.data.viewer.sponsors.nodes.filter(
+	// 		(sponsor) => sponsor.sponsorshipForViewerAsSponsorable.tier.id === tierId,
+	// 	);
+	// }
 
 	return (
-		<div className="flex flex-col sm:flex-row gap-8 px-4 sm:px-0 mt-8">
+		<div className="flex sm:flex-row gap-8 px-4 sm:px-0 mt-8 flex-col-reverse">
 			<SponsorshipsCategory
 				tiers={tiersByMode.oneTime}
-				sponsors={githubResponse.data.viewer.sponsors.nodes}
+				sponsors={githubResponse.data.viewer.sponsorshipsAsMaintainer.nodes}
 				icon={<IconCircleNumber1 className="inline" />}
 				label="One-time"
 			/>
 			<SponsorshipsCategory
 				tiers={tiersByMode.recurring}
-				sponsors={githubResponse.data.viewer.sponsors.nodes}
+				sponsors={githubResponse.data.viewer.sponsorshipsAsMaintainer.nodes}
 				icon={<IconRotateClockwise2 className="inline" />}
 				label="Recurring"
 			/>

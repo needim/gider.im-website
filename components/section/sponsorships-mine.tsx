@@ -13,7 +13,7 @@ export function SponsorshipsMine({
 	);
 
 	return (
-		<div className="w-full mt-8 mx-4 sm:mx-0">
+		<div className="w-full mt-8 sm:mx-0 px-4">
 			<h1 className="text-2xl font-semibold mt-8 mb-4">My Sponsorships</h1>
 
 			<div className="m-0 p-0 list-none grid grid-cols-1 sm:grid-cols-3 max-w-full">

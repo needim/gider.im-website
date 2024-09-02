@@ -4,7 +4,6 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { IconCircleNumber1 } from "@tabler/icons-react";
 import markdownit from "markdown-it";
 
 export function SponsorshipsCategory({
@@ -14,15 +13,13 @@ export function SponsorshipsCategory({
 	label,
 }: {
 	tiers: TierElement[];
-	sponsors: SponsorsNode[];
+	sponsors: SponsorshipsAsMaintainerNode[];
 	icon: React.ReactNode;
 	label: string;
 }) {
 	const md = markdownit();
 	function getSponsorsByTier(tierId: string) {
-		return sponsors.filter(
-			(sponsor) => sponsor.sponsorshipForViewerAsSponsorable.tier.id === tierId,
-		);
+		return sponsors.filter((sponsor) => sponsor.tier.id === tierId);
 	}
 	const featuredTierId = "ST_kwDOAAQmKM4AAvQg";
 
@@ -73,7 +70,10 @@ export function SponsorshipsCategory({
 
 							<div className="flex justify-start my-2 flex-wrap">
 								{tierSponsors.map((sponsor) => (
-									<Sponsor key={sponsor.login} {...sponsor} />
+									<Sponsor
+										key={sponsor.sponsorEntity.login}
+										{...sponsor.sponsorEntity}
+									/>
 								))}
 							</div>
 

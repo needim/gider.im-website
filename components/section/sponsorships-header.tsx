@@ -8,16 +8,14 @@ export function SponsorshipsHeader({
 	githubResponse,
 }: { githubResponse: Externals.Github.APIResponse }) {
 	const activeGoal = githubResponse.data.viewer.sponsorsListing.activeGoal;
-	const firstMonthlySponsor = githubResponse.data.viewer.sponsors.nodes.find(
-		(sponsor) =>
-			sponsor.sponsorshipForViewerAsSponsorable.isActive &&
-			sponsor.sponsorshipForViewerAsSponsorable.tier.isOneTime === false,
-	);
-	const monthlySponsors = githubResponse.data.viewer.sponsors.nodes.filter(
-		(sponsor) =>
-			sponsor.sponsorshipForViewerAsSponsorable.isActive &&
-			sponsor.sponsorshipForViewerAsSponsorable.tier.isOneTime === false,
-	);
+	const firstMonthlySponsor =
+		githubResponse.data.viewer.sponsorshipsAsMaintainer.nodes.find(
+			(sponsor) => sponsor.tier.isOneTime === false,
+		);
+	const monthlySponsors =
+		githubResponse.data.viewer.sponsorshipsAsMaintainer.nodes.filter(
+			(sponsor) => sponsor.isActive && sponsor.tier.isOneTime === false,
+		);
 	const monthlySponsorCount = monthlySponsors.length;
 
 	return (
