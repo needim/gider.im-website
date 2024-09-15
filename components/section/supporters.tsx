@@ -46,7 +46,7 @@ export async function Supporters() {
 		);
 
 	const chunks = allSupporters.reduce((resultArray, item, index) => {
-		const chunkIndex = Math.floor(index / 12);
+		const chunkIndex = Math.floor(index / 14);
 
 		if (!resultArray[chunkIndex]) {
 			resultArray[chunkIndex] = [];
@@ -82,10 +82,6 @@ export async function Supporters() {
 				</div>
 			))}
 
-			<div className="mt-4">
-				<YoutubeSponsor />
-			</div>
-
 			<h2 className="text-md font-semibold text-center lg:text-left mt-4 mb-0.5">
 				Contest Sponsors
 			</h2>
@@ -93,6 +89,10 @@ export async function Supporters() {
 				{EVENT_SPONSORS.map((sponsor) => (
 					<EventSponsor key={sponsor.username} {...sponsor} />
 				))}
+			</div>
+
+			<div className="mt-4 mx-auto max-w-fit lg:-ml-1.5">
+				<YoutubeSponsor />
 			</div>
 		</>
 	);
