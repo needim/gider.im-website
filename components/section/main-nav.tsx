@@ -83,7 +83,7 @@ export function MainNav() {
 						)}
 					>
 						<div className="inline-flex items-center justify-center px-3 py-1.5 transition ease-out hover:text-zinc-600 hover:duration-300 hover:dark:text-zinc-400">
-							<span>
+							<span className="flex items-center gap-1">
 								<IconHeartFilled className="size-5 text-red-600 dark:text-red-400 inline" />{" "}
 								Sponsorships
 							</span>
@@ -103,7 +103,7 @@ export function MainNav() {
 						)}
 					>
 						<div className="inline-flex items-center justify-center px-3 py-1.5 transition ease-out hover:text-zinc-600 hover:duration-300 hover:dark:text-zinc-400">
-							<span>
+							<span className="flex items-center gap-1">
 								<IconBrandGithubFilled className="size-5 inline" /> Source Code
 							</span>
 						</div>
