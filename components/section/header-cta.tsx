@@ -3,13 +3,18 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export function HeaderCta() {
+export function HeaderCta({
+	size = "default",
+}: { size?: "default" | "large" }) {
 	return (
 		<Link
 			href="https://app.gider.im/"
 			target="_blank"
 			className={cn(
-				buttonVariants({ variant: "default" }),
+				buttonVariants({
+					variant: "default",
+					size: size !== "large" ? "default" : "lg",
+				}),
 				"group relative rounded-2xl",
 			)}
 		>

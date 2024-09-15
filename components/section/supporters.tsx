@@ -59,19 +59,19 @@ export async function Supporters() {
 
 	return (
 		<>
-			<h2 className="text-lg text-center mb-2">
-				Supported by{" "}
+			<h2 className="text-md text-center lg:text-left mb-3">
 				<span className="underline-doodle font-semibold">
 					{githubResponse.data.viewer.sponsorshipsAsMaintainer.totalCount +
 						EVENT_SPONSORS.filter((s) => s.includeInTotal).length}{" "}
 					people
-				</span>
+				</span>{" "}
+				supporting this project
 			</h2>
 
 			{chunks.map((chunk, index) => (
 				<div
 					key={index}
-					className="flex justify-center max-w-sm mx-auto flex-wrap"
+					className="flex lg:justify-start justify-center max-w-sm flex-wrap -mt-1.5"
 				>
 					{chunk.map((sponsor) => (
 						<Sponsor
@@ -82,15 +82,18 @@ export async function Supporters() {
 				</div>
 			))}
 
-			<h2 className="text-lg font-semibold text-center mt-4 mb-2">
+			<div className="mt-4">
+				<YoutubeSponsor />
+			</div>
+
+			<h2 className="text-md font-semibold text-center lg:text-left mt-4 mb-0.5">
 				Contest Sponsors
 			</h2>
-			<div className="flex justify-center mb-4 max-w-sm mx-auto flex-wrap">
+			<div className="flex lg:justify-start justify-center mb-4 items-center flex-wrap">
 				{EVENT_SPONSORS.map((sponsor) => (
 					<EventSponsor key={sponsor.username} {...sponsor} />
 				))}
 			</div>
-			<YoutubeSponsor />
 		</>
 	);
 }

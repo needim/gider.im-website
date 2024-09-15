@@ -1,10 +1,11 @@
+import { BreakpointDebug } from "@/components/custom/breakpoint-debug";
+import { Header } from "@/components/section/header";
+import { HeaderTop } from "@/components/section/header-top";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/providers/theme";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Lexend, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/section/header";
-import { HeaderTop } from "@/components/section/header-top";
-import { TooltipProvider } from "@/components/ui/tooltip";
 
 const lexend = Lexend({
 	subsets: ["latin"],
@@ -104,13 +105,14 @@ export default function RootLayout({
 				>
 					<TooltipProvider delayDuration={200} skipDelayDuration={0}>
 						<div className="flex min-h-screen flex-col">
-							<HeaderTop />
 							<Header />
 							<main className="flex-1 w-full max-w-7xl mx-auto">
 								{children}
 							</main>
+							<HeaderTop />
 						</div>
 					</TooltipProvider>
+					<BreakpointDebug />
 				</ThemeProvider>
 			</body>
 		</html>

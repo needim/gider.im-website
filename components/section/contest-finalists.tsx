@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export function ContestFinalists() {
 	const finalists = [
@@ -59,7 +58,7 @@ export function ContestFinalists() {
 						is over and the winners are announced.
 					</p>
 				</div>
-				<ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-2 gap-y-20 sm:grid-cols-4 lg:max-w-4xl lg:gap-x-2 xl:max-w-none">
+				<ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-2 gap-y-20 sm:grid-cols-4 lg:max-w-7xl lg:gap-x-2 xl:max-w-none">
 					{finalists.map((person) => (
 						<li
 							key={person.name}
@@ -77,7 +76,7 @@ export function ContestFinalists() {
 									src={person.imageUrl}
 									className="w-52 flex-none rounded-2xl object-top object-cover grayscale group-hover:grayscale-0 transition-filter duration-300"
 								/>
-								<div className="absolute -bottom-px w-full pb-6 pt-56 bg-gradient-to-t dark:from-zinc-950 from-white dark:via-zinc-900/80 via-zinc-300/80 to-transparent rounded-b-[32px]">
+								<div className="absolute -bottom-px md:-bottom-2 w-full pb-6 pt-56 md:pt-24 bg-gradient-to-t dark:from-zinc-950 from-white dark:via-zinc-900/80 via-zinc-300/80 to-transparent rounded-b-[32px]">
 									<div className="flex flex-col items-center">
 										<svg
 											width="54"

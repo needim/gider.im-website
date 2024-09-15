@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export function YoutubeSponsor() {
 	return (
-		<div className="flex justify-center items-center mb-3 mt-4">
-			<div className="border border-zinc-800 rounded-2xl rounded-r-none bg-white dark:bg-zinc-950 pr-3 tracking-wide pl-3 h-[40px] flex items-center justify-center text-sm leading-none z-10 whitespace-nowrap">
+		<div className="flex justify-start items-center">
+			<div className="border border-zinc-800 rounded-lg rounded-r-none bg-white dark:bg-zinc-950 pr-3 tracking-wide pl-3 h-[33px] flex items-center justify-center text-sm leading-none z-10 whitespace-nowrap">
 				<span className="relative font-semibold">YouTube Sponsor</span>
 			</div>
 			<Link
 				href="https://www.youtube.com/@eserlive"
 				target="_blank"
-				className="text-sm rounded-l-none border border-zinc-800 bg-zinc-800 text-white pl-9 rounded-2xl pr-4 h-[40px] -ml-8 relative overflow-hidden z-0 flex items-center transition-all hover:bg-zinc-700"
+				className="text-sm rounded-l-none border border-zinc-800 bg-zinc-800 text-white pl-9 rounded-lg pr-4 h-[33px] -ml-8 relative overflow-hidden z-0 flex items-center transition-all hover:bg-zinc-700"
 			>
 				<svg
 					width="69"

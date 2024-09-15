@@ -18,11 +18,11 @@ export function Sponsor({ login, name }: SponsorEntity) {
 					target="_blank"
 					href={`https://github.com/${login}`}
 					className={cn(
-						"transition-all -mx-1.5 sm:-mx-0.5 hover:mx-1.5 delay-200",
+						"transition-all -mx-1.5 sm:-mx-0.5 hover:mr-1.5 delay-200",
 					)}
 					rel="noreferrer"
 				>
-					<Avatar className="ring size-8 ring-white dark:ring-zinc-950">
+					<Avatar className="ring size-7 ring-white dark:ring-zinc-950">
 						<AvatarImage
 							src={`https://avatars.githubusercontent.com/${login}`}
 						/>

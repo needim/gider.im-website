@@ -33,13 +33,13 @@ export function EventSponsor({
 							: `https://twitter.com/${username}`
 					}
 					className={cn(
-						"transition-all -mx-1.5 sm:-mx-0.5 hover:mx-1.5 delay-200",
+						"transition-all -mx-1.5 sm:-mx-0.5 hover:mr-1.5 delay-200",
 					)}
 					rel="noreferrer"
 				>
 					<Avatar
 						className={cn(
-							"ring size-10 ring-white dark:ring-zinc-950",
+							"ring size-7 ring-white dark:ring-zinc-950",
 							className,
 						)}
 					>

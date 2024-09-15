@@ -37,12 +37,31 @@ export function MobileNav({ children }: MobileNavProps) {
 				</Link>
 				<nav className="grid grid-flow-row auto-rows-max text-sm">
 					<Link
+						href="https://github.com/needim/giderim-pwa"
+						target="_blank"
+						rel="noopener noreferrer"
+						className={cn(
+							"flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
+						)}
+					>
+						Source Code
+					</Link>
+					<Link
 						href="/roadmap"
 						className={cn(
 							"flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
 						)}
 					>
 						Roadmap
+					</Link>
+
+					<Link
+						href="/sponsorship"
+						className={cn(
+							"flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
+						)}
+					>
+						Sponsorship
 					</Link>
 					<Link
 						href="/design"
@@ -51,14 +70,6 @@ export function MobileNav({ children }: MobileNavProps) {
 						)}
 					>
 						Design Contest
-					</Link>
-					<Link
-						href="/sponsorship"
-						className={cn(
-							"flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
-						)}
-					>
-						Sponsorship
 					</Link>
 				</nav>
 				{children}

@@ -1,8 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { SupportCta } from "@/components/section/support-cta";
 import { ActiveGoal } from "@/components/custom/active-goal";
+import { SupportCta } from "@/components/section/support-cta";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function SponsorshipsHeader({
 	githubResponse,

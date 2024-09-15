@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export function CorporateSponsors() {
 	return (
-		<div className="mt-2 mb-2">
-			<div className="rounded-lg overflow-hidden">
-				<div className="mx-auto max-w-2xl">
-					<div className="grid grid-cols-4 gap-0.5 overflow-hidden">
+		<div>
+			<div className="rounded-lg rounded-b-none overflow-hidden">
+				<div className="mx-auto max-w-7xl">
+					<div className="grid grid-cols-4 lg:grid-cols-8 gap-0.5 overflow-hidden">
 						<a
 							href="https://birdefter.com?utm_source=giderim"
 							className="bg-zinc-100/75 dark:bg-zinc-900 p-4 px-6 flex items-center col-span-1"
