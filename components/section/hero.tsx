@@ -1,6 +1,7 @@
 import { features } from "@/components/section/features";
 import { Supporters } from "@/components/section/supporters";
 import Image from "next/image";
+import {Mockup} from '@/components/custom/mockup'
 
 export function Hero() {
 	return (
@@ -23,6 +24,7 @@ export function Hero() {
 					</div>
 				</div>
 				<div className="relative max-w-full lg:w-full overflow-hidden">
+					{/*
 					<Image
 						alt="Giderim App"
 						priority
@@ -31,6 +33,8 @@ export function Hero() {
 						height={1017}
 						className="mx-auto max-w-full relative -right-20 md:max-w-md md:-right-10 lg:right-0 xl:-right-8"
 					/>
+					*/}
+					<Mockup className="mx-auto max-w-full relative -right-20 md:max-w-md md:-right-10 lg:right-0 xl:-right-8" src="/frame.png" />
 				</div>
 			</div>
 		</>
