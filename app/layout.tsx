@@ -1,3 +1,4 @@
+import { FathomAnalytics } from "@/app/fathom";
 import { BreakpointDebug } from "@/components/custom/breakpoint-debug";
 import { Header } from "@/components/section/header";
 import { HeaderTop } from "@/components/section/header-top";
@@ -96,6 +97,7 @@ export default function RootLayout({
 			className={`${lexend.variable} ${ibm.variable} ${playfair.variable}`}
 		>
 			<body>
+				<FathomAnalytics />
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
