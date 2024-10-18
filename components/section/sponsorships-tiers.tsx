@@ -1,12 +1,5 @@
-import { Sponsor } from "@/components/custom/sponsor";
 import { SponsorshipsCategory } from "@/components/section/sponsorships-category";
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { IconCircleNumber1, IconRotateClockwise2 } from "@tabler/icons-react";
-import markdownit from "markdown-it";
 
 export function SponsorshipsTiers({
 	githubResponse,
@@ -20,10 +13,6 @@ export function SponsorshipsTiers({
 		},
 	);
 
-	const featuredTierId = "ST_kwDOAAQmKM4AAvQg";
-
-	const md = markdownit();
-
 	const tiersByMode = tiers.reduce(
 		(acc, tier) => {
 			if (tier.isOneTime) {
@@ -35,12 +24,6 @@ export function SponsorshipsTiers({
 		},
 		{ oneTime: [] as TierElement[], recurring: [] as TierElement[] },
 	);
-
-	// function getSponsorsByTier(tierId: string) {
-	// 	return githubResponse.data.viewer.sponsors.nodes.filter(
-	// 		(sponsor) => sponsor.sponsorshipForViewerAsSponsorable.tier.id === tierId,
-	// 	);
-	// }
 
 	return (
 		<div className="flex sm:flex-row gap-8 px-4 sm:px-0 mt-8 flex-col-reverse">

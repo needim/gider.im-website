@@ -20,7 +20,7 @@ export function EventSponsor({
 }) {
 	return (
 		<Tooltip key={username}>
-			<TooltipContent className="text-center">
+			<TooltipContent className="text-center text-zinc-50">
 				<p>{tooltip}</p>
 				<p className="text-xs text-muted-foreground">@{username}</p>
 			</TooltipContent>
@@ -33,7 +33,7 @@ export function EventSponsor({
 							: `https://twitter.com/${username}`
 					}
 					className={cn(
-						"transition-all -mx-1.5 sm:-mx-0.5 hover:mr-1.5 delay-200",
+						"transition-all relative -mx-0.5 hover:scale-125 hover:z-10",
 					)}
 					rel="noreferrer"
 				>

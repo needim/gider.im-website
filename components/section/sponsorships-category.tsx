@@ -1,9 +1,4 @@
 import { Sponsor } from "@/components/custom/sponsor";
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipTrigger,
-} from "@/components/ui/tooltip";
 import markdownit from "markdown-it";
 
 export function SponsorshipsCategory({
@@ -30,7 +25,7 @@ export function SponsorshipsCategory({
 					<div className="w-full border-t border-dashed border-zinc-200 dark:border-zinc-700" />
 				</div>
 				<div className="relative flex justify-start">
-					<span className="bg-white dark:bg-zinc-950 text-sky-600 dark:text-sky-300 pr-2 text-lg font-semibold">
+					<span className="bg-white dark:bg-zinc-950 flex items-center gap-1 text-sky-600 dark:text-sky-300 pr-2 text-lg font-medium">
 						{icon} {label}
 					</span>
 				</div>
@@ -47,23 +42,10 @@ export function SponsorshipsCategory({
 							<h2 className="text-xl font-medium flex items-center">
 								{tier.name}
 
-								{tier.id === featuredTierId && (
-									<Tooltip>
-										<TooltipContent className="text-center">
-											<p>Featured tier</p>
-										</TooltipContent>
-										<TooltipTrigger asChild>
-											<span className="relative flex h-2 w-2 ml-2">
-												<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75" />
-												<span className="relative inline-flex rounded-full h-2 w-2 bg-pink-500" />
-											</span>
-										</TooltipTrigger>
-									</Tooltip>
-								)}
-
 								{tierSponsors.length > 0 && (
 									<span className="text-muted-foreground font-normal text-xs ml-auto">
-										{tierSponsors.length} sponsors
+										{tierSponsors.length} sponsor
+										{tierSponsors.length > 1 ? "s" : ""}
 									</span>
 								)}
 							</h2>
