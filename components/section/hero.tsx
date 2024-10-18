@@ -20,7 +20,7 @@ export function Hero(): React.ReactElement {
 					</Link>
 				</div>
 			</div> */}
-			<h1 className="mx-auto max-w-2xl text-balance text-center font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-7xl lg:mt-8 !leading">
+			<h1 className="mx-auto max-w-2xl text-balance text-center font-display text-4xl font-medium tracking-tight text-zinc-900 sm:text-7xl lg:mt-8">
 				Privacy focused, <span className="text-[#10B79B]">income</span>,{" "}
 				<span className="text-[#F05D48]">expense</span> &{" "}
 				<span className="text-[#EDB403]">asset</span> tracking.

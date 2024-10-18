@@ -53,10 +53,10 @@ export function AllFeatures() {
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 					<div>
-						<h2 className="text-base font-semibold leading-7 text-blue-500">
+						<h2 className="text-base font-medium leading-7 text-blue-500">
 							Everything you need
 						</h2>
-						<p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+						<p className="mt-2 text-3xl font-medium tracking-tight sm:text-4xl">
 							All-in-one application
 						</p>
 						<p className="mt-6 text-base leading-7 text-muted-foreground text-balance">
