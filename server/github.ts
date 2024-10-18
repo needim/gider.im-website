@@ -1,5 +1,6 @@
 "use server";
 
+import { SPONSOR_LINK } from "@/lib/constants";
 import { unstable_cache as cache } from "next/cache";
 
 const CACHE_DURATION = 1800; // 30 minutes
@@ -788,7 +789,7 @@ const DEFAULT_GITHUB_RESPONSE = {
 				],
 			},
 			sponsorsListing: {
-				url: "https://github.com/sponsors/needim",
+				url: SPONSOR_LINK,
 				fullDescription:
 					"Hello, I'm Nedim 👋\n\nBy sponsoring me, you will help me spend more time maintaining my projects. Thanks!\n",
 				activeGoal: {

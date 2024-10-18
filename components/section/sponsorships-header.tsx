@@ -23,11 +23,11 @@ export function SponsorshipsHeader({
 				<Image
 					src="https://avatars.githubusercontent.com/needim"
 					alt="sponsorship"
-					width={120}
-					height={120}
+					width={140}
+					height={140}
 					className="rounded-full"
 				/>
-				<div className="text-center text-lg text-balance mt-4 sm:mt-0 sm:text-left">
+				<div className="text-center text-lg max-w-xl text-balance mt-4 sm:mt-0 sm:text-left">
 					{githubResponse.data.viewer.sponsorsListing.fullDescription
 						.split("\n")
 						.map((line, index) => (

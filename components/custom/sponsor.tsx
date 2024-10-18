@@ -1,3 +1,5 @@
+"use client";
+
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import {
 	Tooltip,
@@ -5,29 +7,32 @@ import {
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 export function Sponsor({ login, name }: SponsorEntity) {
 	return (
 		<Tooltip key={login}>
-			<TooltipContent className="text-center">
+			<TooltipContent className="text-center text-zinc-50">
 				<p>{name}</p>
 				<p className="text-xs text-muted-foreground">@{login}</p>
 			</TooltipContent>
 			<TooltipTrigger asChild>
-				<a
+				<motion.a
+					// initial={{ opacity: 0, y: 15 }}
+					// animate={{ opacity: 1, y: 0 }}
 					target="_blank"
 					href={`https://github.com/${login}`}
 					className={cn(
-						"transition-all -mx-1.5 sm:-mx-0.5 hover:mr-1.5 delay-200",
+						"transition-all relative -mx-0.5 hover:scale-125 hover:z-10",
 					)}
 					rel="noreferrer"
 				>
-					<Avatar className="ring size-7 ring-white dark:ring-zinc-950">
+					<Avatar className="ring size-7 ring-zinc-50 dark:ring-zinc-950">
 						<AvatarImage
 							src={`https://avatars.githubusercontent.com/${login}`}
 						/>
 					</Avatar>
-				</a>
+				</motion.a>
 			</TooltipTrigger>
 		</Tooltip>
 	);

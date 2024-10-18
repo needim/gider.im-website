@@ -1,4 +1,5 @@
-import AnimatedGradientSponsorText from "@/components/magicui/animated-gradient-sponsor-text";
+import AnimatedGradientSponsorText from "@/components/custom/animated-gradient-sponsor-text";
+import { SPONSOR_LINK } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { IconChevronRight, IconHeartFilled } from "@tabler/icons-react";
 import Link from "next/link";
@@ -7,7 +8,7 @@ export function SupportCta({
 	className,
 	subClassName,
 	minimal = false,
-	label = "Support this project",
+	label = "Sponsor this project",
 }: {
 	className?: string;
 	subClassName?: string;
@@ -18,7 +19,7 @@ export function SupportCta({
 		<div className={cn("relative isolate text-center group", className)}>
 			<Link
 				target="_blank"
-				href={"https://github.com/sponsors/needim"}
+				href={SPONSOR_LINK}
 				className="z-10 items-center justify-center inline-flex"
 			>
 				<AnimatedGradientSponsorText className={subClassName}>
