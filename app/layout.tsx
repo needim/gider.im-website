@@ -1,4 +1,3 @@
-import { FathomAnalytics } from "@/app/fathom";
 import { BreakpointDebug } from "@/components/custom/breakpoint-debug";
 import Logo from "@/components/custom/logo";
 import { Button } from "@/components/ui/button";
@@ -33,8 +32,10 @@ import {
 	IconShieldLock,
 } from "@tabler/icons-react";
 import type { Metadata } from "next";
+import PlausibleProvider from "next-plausible";
 import { Fira_Mono } from "next/font/google";
 import localFont from "next/font/local";
+
 const font = localFont({
 	src: [
 		{
@@ -176,9 +177,13 @@ export default function RootLayout({
 				/>
 				<meta name="apple-mobile-web-app-title" content="gider.im" />
 				<link rel="manifest" href="/site.webmanifest" />
+				<PlausibleProvider
+					selfHosted
+					customDomain="https://stats.ned.im"
+					domain="gider.im"
+				/>
 			</head>
 			<body>
-				<FathomAnalytics />
 				<TooltipProvider delayDuration={0} skipDelayDuration={0}>
 					<StackedLayout
 						navbar={
