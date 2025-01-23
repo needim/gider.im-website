@@ -3,7 +3,7 @@
 import { RoadmapAchievement } from "@/components/custom/roadmap-achievement";
 import { cn } from "@/lib/utils";
 import { IconArrowRight } from "@tabler/icons-react";
-import { type Variants, motion } from "framer-motion";
+import { type Variants, motion } from "motion/react";
 import Link from "next/link";
 
 // TODO: progreess visualisation calculation needs a fix
@@ -162,7 +162,7 @@ export default function Roadmap() {
 								)}
 							>
 								<div className="relative z-10 size-7 flex justify-center items-center">
-									<span className="size-6 flex-shrink-0 text-2xl">
+									<span className="size-6 shrink-0 text-2xl">
 										{roadmap_item.icon}
 									</span>
 								</div>

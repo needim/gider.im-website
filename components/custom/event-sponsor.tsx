@@ -39,7 +39,7 @@ export function EventSponsor({
 				>
 					<Avatar
 						className={cn(
-							"ring size-7 ring-white dark:ring-zinc-950",
+							"ring-3 size-7 ring-white dark:ring-zinc-950",
 							className,
 						)}
 					>

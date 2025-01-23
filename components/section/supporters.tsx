@@ -43,7 +43,7 @@ export async function Supporters() {
 			<div className="flex justify-center items-center flex-wrap">
 				<Tooltip>
 					<TooltipContent className="text-center text-zinc-50">
-						<Strong className="!text-red-400">Special Sponsor</Strong>
+						<Strong className="text-red-400!">Special Sponsor</Strong>
 						<p>eser.live</p>
 						<p className="text-xs text-muted-foreground">
 							Eser Özvataf's <br />

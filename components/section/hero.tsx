@@ -1,25 +1,18 @@
 import HyperText from "@/components/ui/hyper-text";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import { Strong } from "@/components/ui/text";
 import { PWA_LINK } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import type React from "react";
 
-export function Hero(): React.ReactElement {
+export function Hero() {
 	return (
 		<div className="relative">
-			{/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+			<div className="hidden sm:mb-8 sm:flex sm:justify-center">
 				<div className="relative rounded-full px-3 py-1 text-sm leading-6 text-muted-foreground ring-[6px] ring-background border-2 border-zinc-300 hover:border-zinc-400 transition-all ">
-					<Strong>Sync</Strong> feature is live.{" "}
-					<Link href="#" className="font-medium text-blue-500">
-						<span aria-hidden="true" className="absolute inset-0" />
-						<span className="inline-flex items-center gap-1">
-							Read more{" "}
-							<IconArrowRight className="size-3 inline-block stroke-[3px]" />
-						</span>
-					</Link>
+					Now you can <Strong>sync</Strong> your data across all your devices.
 				</div>
-			</div> */}
+			</div>
 			<h1 className="mx-auto max-w-2xl text-balance text-center font-display text-4xl font-medium tracking-tight text-zinc-900 sm:text-7xl lg:mt-8">
 				Privacy focused, <span className="text-[#10B79B]">income</span>,{" "}
 				<span className="text-[#F05D48]">expense</span> &{" "}

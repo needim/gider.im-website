@@ -26,7 +26,7 @@ export function SupportCta({
 					<IconHeartFilled className="text-red-600 dark:text-red-400 mr-2" />{" "}
 					<span
 						className={cn(
-							"inline animate-gradient bg-gradient-to-r from-red-900 dark:from-red-200 via-red-600 dark:via-white to-red-900 dark:to-red-200 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent text-xl font-semibold py-1",
+							"inline animate-gradient bg-linear-to-r from-red-900 dark:from-red-200 via-red-600 dark:via-white to-red-900 dark:to-red-200 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent text-xl font-semibold py-1",
 							minimal && "text-base",
 						)}
 					>

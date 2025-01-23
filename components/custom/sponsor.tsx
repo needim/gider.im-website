@@ -7,7 +7,7 @@ import {
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function Sponsor({ login, name }: SponsorEntity) {
 	return (
@@ -27,7 +27,7 @@ export function Sponsor({ login, name }: SponsorEntity) {
 					)}
 					rel="noreferrer"
 				>
-					<Avatar className="ring size-7 ring-zinc-50 dark:ring-zinc-950">
+					<Avatar className="ring-3 size-7 ring-zinc-50 dark:ring-zinc-950">
 						<AvatarImage
 							src={`https://avatars.githubusercontent.com/${login}`}
 						/>
