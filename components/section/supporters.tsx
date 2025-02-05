@@ -9,6 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import { getGithubInfo } from "@/server/github";
 import { IconArrowRight, IconBrandYoutubeFilled } from "@tabler/icons-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const EXTERNAL_SPONSORS = [
@@ -41,6 +42,35 @@ export async function Supporters() {
 			</h2>
 
 			<div className="flex justify-center items-center flex-wrap">
+				<Tooltip>
+					<TooltipContent className="text-center text-zinc-50">
+						<Strong className="text-indigo-400!">Special Sponsor</Strong>
+						<p>Designer Daily Report</p>
+						<p className="text-xs text-muted-foreground">
+							Daily Curated, Interactive Newspaper
+							<br />
+							for Designers.
+						</p>
+					</TooltipContent>
+					<TooltipTrigger asChild>
+						<a
+							target="_blank"
+							href="https://designerdailyreport.com/?utm_source=gider.im&utm_medium=gider.im-website&utm_campaign=supporter"
+							className={cn(
+								"transition-all relative -mx-0.5 hover:scale-125 hover:z-10",
+							)}
+							rel="noreferrer"
+						>
+							<Image
+								className="ring-3 size-7 ring-white rounded-full"
+								src="/ddr-logo-circle.png"
+								width={34}
+								height={34}
+								alt="Designerdailyreport"
+							/>
+						</a>
+					</TooltipTrigger>
+				</Tooltip>
 				<Tooltip>
 					<TooltipContent className="text-center text-zinc-50">
 						<Strong className="text-red-400!">Special Sponsor</Strong>

@@ -184,7 +184,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body>
-				<TooltipProvider delayDuration={0} skipDelayDuration={0}>
+				<TooltipProvider delayDuration={0} disableHoverableContent>
 					<StackedLayout
 						navbar={
 							<Navbar>
