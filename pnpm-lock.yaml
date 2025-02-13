@@ -63,7 +63,7 @@ importers:
         version: 14.1.2
       '@types/node':
         specifier: ^22.10.10
-        version: 22.10.10
+        version: 22.13.2
       '@types/react':
         specifier: 19.0.8
         version: 19.0.8
@@ -72,7 +72,7 @@ importers:
         version: 19.0.3(@types/react@19.0.8)
       knip:
         specifier: ^5.43.1
-        version: 5.43.1(@types/node@22.10.10)(typescript@5.7.3)
+        version: 5.43.1(@types/node@22.13.2)(typescript@5.7.3)
       postcss:
         specifier: ^8
         version: 8.4.47
@@ -710,8 +710,8 @@ packages:
   '@types/mdurl@2.0.0':
     resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
 
-  '@types/node@22.10.10':
-    resolution: {integrity: sha512-X47y/mPNzxviAGY5TcYPtYL8JsY3kAq2n8fMmKoRCxq/c4v4pyGNCzM2R6+M5/umG4ZfHuT+sgqDYqWc9rJ6ww==}
+  '@types/node@22.13.2':
+    resolution: {integrity: sha512-Z+r8y3XL9ZpI2EY52YYygAFmo2/oWfNSj4BCpAXE2McAexDk8VcnBMGC9Djn9gTKt4d2T/hhXqmPzo4hfIXtTg==}
 
   '@types/react-dom@19.0.3':
     resolution: {integrity: sha512-0Knk+HJiMP/qOZgMyNFamlIjw9OFCsyC2ZbigmEEyXXixgre6IQpm/4V+r3qH4GC1JPvRJKInw+on2rV6YZLeA==}
@@ -1681,7 +1681,7 @@ snapshots:
 
   '@types/mdurl@2.0.0': {}
 
-  '@types/node@22.10.10':
+  '@types/node@22.13.2':
     dependencies:
       undici-types: 6.20.0
 
@@ -1820,11 +1820,11 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  knip@5.43.1(@types/node@22.10.10)(typescript@5.7.3):
+  knip@5.43.1(@types/node@22.13.2)(typescript@5.7.3):
     dependencies:
       '@nodelib/fs.walk': 3.0.1
       '@snyk/github-codeowners': 1.1.0
-      '@types/node': 22.10.10
+      '@types/node': 22.13.2
       easy-table: 1.2.0
       enhanced-resolve: 5.18.0
       fast-glob: 3.3.3
