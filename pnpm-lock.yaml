@@ -23,7 +23,7 @@ importers:
         version: 1.1.7(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@tabler/icons-react':
         specifier: ^3.29.0
-        version: 3.29.0(react@19.0.0)
+        version: 3.36.0(react@19.0.0)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -608,13 +608,13 @@ packages:
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
 
-  '@tabler/icons-react@3.29.0':
-    resolution: {integrity: sha512-jaa3b3j91CplY7TPgx/Gj/e+PcOnQgYiK6c5qtp1P0ytfKM5WPc1qtXyRLE3NcYlfxS2Pcst4YGy1vUML7SjbQ==}
+  '@tabler/icons-react@3.36.0':
+    resolution: {integrity: sha512-sSZ00bEjTdTTskVFykq294RJq+9cFatwy4uYa78HcYBCXU1kSD1DIp5yoFsQXmybkIOKCjp18OnhAYk553UIfQ==}
     peerDependencies:
       react: '>= 16'
 
-  '@tabler/icons@3.29.0':
-    resolution: {integrity: sha512-VWNINymdmhay3MDvWVREmRwuWLSrX3YiInKvs5L4AHRF4bAfJabLlEReE0BW/XFsBt22ff8/C8Eam/LXlF97mA==}
+  '@tabler/icons@3.36.0':
+    resolution: {integrity: sha512-z9OfTEG6QbaQWM9KBOxxUdpgvMUn0atageXyiaSc2gmYm51ORO8Ua7eUcjlks+Dc0YMK4rrodAFdK9SfjJ4ZcA==}
 
   '@tailwindcss/node@4.0.0':
     resolution: {integrity: sha512-tfG2uBvo6j6kDIPmntxwXggCOZAt7SkpAXJ6pTIYirNdk5FBqh/CZZ9BZPpgcl/tNFLs6zc4yghM76sqiELG9g==}
@@ -993,6 +993,7 @@ packages:
   next@15.1.6:
     resolution: {integrity: sha512-Hch4wzbaX0vKQtalpXvUiw5sYivBy4cm5rzUKrBnUB/y436LGrvOUqYvlSeNVCWFO/770gDlltR9gqZH62ct4Q==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -1595,12 +1596,12 @@ snapshots:
     dependencies:
       tslib: 2.8.0
 
-  '@tabler/icons-react@3.29.0(react@19.0.0)':
+  '@tabler/icons-react@3.36.0(react@19.0.0)':
     dependencies:
-      '@tabler/icons': 3.29.0
+      '@tabler/icons': 3.36.0
       react: 19.0.0
 
-  '@tabler/icons@3.29.0': {}
+  '@tabler/icons@3.36.0': {}
 
   '@tailwindcss/node@4.0.0':
     dependencies:
