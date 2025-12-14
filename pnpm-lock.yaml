@@ -63,7 +63,7 @@ importers:
         version: 14.1.2
       '@types/node':
         specifier: ^22.10.10
-        version: 22.10.10
+        version: 22.19.3
       '@types/react':
         specifier: 19.0.8
         version: 19.0.8
@@ -72,7 +72,7 @@ importers:
         version: 19.0.3(@types/react@19.0.8)
       knip:
         specifier: ^5.43.1
-        version: 5.43.1(@types/node@22.10.10)(typescript@5.7.3)
+        version: 5.43.1(@types/node@22.19.3)(typescript@5.7.3)
       postcss:
         specifier: ^8
         version: 8.4.47
@@ -710,8 +710,8 @@ packages:
   '@types/mdurl@2.0.0':
     resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
 
-  '@types/node@22.10.10':
-    resolution: {integrity: sha512-X47y/mPNzxviAGY5TcYPtYL8JsY3kAq2n8fMmKoRCxq/c4v4pyGNCzM2R6+M5/umG4ZfHuT+sgqDYqWc9rJ6ww==}
+  '@types/node@22.19.3':
+    resolution: {integrity: sha512-1N9SBnWYOJTrNZCdh/yJE+t910Y128BoyY+zBLWhL3r0TYzlTmFdXrPwHL9DyFZmlEXNQQolTZh3KHV31QDhyA==}
 
   '@types/react-dom@19.0.3':
     resolution: {integrity: sha512-0Knk+HJiMP/qOZgMyNFamlIjw9OFCsyC2ZbigmEEyXXixgre6IQpm/4V+r3qH4GC1JPvRJKInw+on2rV6YZLeA==}
@@ -993,6 +993,7 @@ packages:
   next@15.1.6:
     resolution: {integrity: sha512-Hch4wzbaX0vKQtalpXvUiw5sYivBy4cm5rzUKrBnUB/y436LGrvOUqYvlSeNVCWFO/770gDlltR9gqZH62ct4Q==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -1145,8 +1146,8 @@ packages:
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
 
-  undici-types@6.20.0:
-    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   wcwidth@1.0.1:
     resolution: {integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==}
@@ -1681,9 +1682,9 @@ snapshots:
 
   '@types/mdurl@2.0.0': {}
 
-  '@types/node@22.10.10':
+  '@types/node@22.19.3':
     dependencies:
-      undici-types: 6.20.0
+      undici-types: 6.21.0
 
   '@types/react-dom@19.0.3(@types/react@19.0.8)':
     dependencies:
@@ -1820,11 +1821,11 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  knip@5.43.1(@types/node@22.10.10)(typescript@5.7.3):
+  knip@5.43.1(@types/node@22.19.3)(typescript@5.7.3):
     dependencies:
       '@nodelib/fs.walk': 3.0.1
       '@snyk/github-codeowners': 1.1.0
-      '@types/node': 22.10.10
+      '@types/node': 22.19.3
       easy-table: 1.2.0
       enhanced-resolve: 5.18.0
       fast-glob: 3.3.3
@@ -2076,7 +2077,7 @@ snapshots:
 
   uc.micro@2.1.0: {}
 
-  undici-types@6.20.0: {}
+  undici-types@6.21.0: {}
 
   wcwidth@1.0.1:
     dependencies:
