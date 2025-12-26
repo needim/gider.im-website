@@ -1,36 +1,4 @@
 import { BreakpointDebug } from "@/components/custom/breakpoint-debug";
-import Logo from "@/components/custom/logo";
-import { Button } from "@/components/ui/button";
-import {
-	DropdownDescription,
-	DropdownDivider,
-	DropdownItem,
-	DropdownLabel,
-	DropdownMenu,
-} from "@/components/ui/dropdown";
-import { Link } from "@/components/ui/link";
-import {
-	Navbar,
-	NavbarDivider,
-	NavbarItem,
-	NavbarSection,
-	NavbarSpacer,
-} from "@/components/ui/navbar";
-import { RainbowButton } from "@/components/ui/rainbow-button";
-import {
-	Sidebar,
-	SidebarBody,
-	SidebarHeader,
-	SidebarItem,
-	SidebarSection,
-} from "@/components/ui/sidebar";
-import { Strong } from "@/components/ui/text";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import {
-	IconArrowUpRight,
-	IconBrandOpenSource,
-	IconShieldLock,
-} from "@tabler/icons-react";
 import type { Metadata } from "next";
 import PlausibleProvider from "next-plausible";
 import { Fira_Mono } from "next/font/google";
@@ -57,8 +25,6 @@ const font = localFont({
 	variable: "--font-display",
 });
 
-import { StackedLayout } from "@/components/ui/layouts/stacked-layout";
-import { PWA_LINK } from "@/lib/constants";
 import "./globals.css";
 
 const fontMono = Fira_Mono({
@@ -67,55 +33,14 @@ const fontMono = Fira_Mono({
 	variable: "--font-mono",
 });
 
-const navItems = [
-	{ label: "Roadmap", url: "/roadmap" },
-	// { label: "Design Contest", url: "/design" },
-	{
-		label: "Sponsorship",
-		url: "/sponsorship",
-	},
-	{
-		label: (
-			<>
-				GitHub
-				<IconArrowUpRight className="size-4 hidden sm:inline-block" />
-			</>
-		),
-		url: "https://github.com/needim/gider.im-pwa",
-		external: true,
-	},
-];
-
-function WhyDropdownMenu() {
-	return (
-		<DropdownMenu className="min-w-80 lg:min-w-64" anchor="bottom start">
-			<DropdownItem href="/why/open-source">
-				<IconBrandOpenSource data-slot="icon" />
-				<DropdownLabel>Free & Open Source</DropdownLabel>
-				<DropdownDescription className="max-w-52 text-balance">
-					You can read, fork, and contribute to the source code on GitHub.
-				</DropdownDescription>
-			</DropdownItem>
-			<DropdownDivider />
-			<DropdownItem href="/why/privacy-focused">
-				<IconShieldLock data-slot="icon" />
-				<DropdownLabel>Local & Privacy First</DropdownLabel>
-				<DropdownDescription className="max-w-52">
-					Only you have access to your data. No ads, no data collection.
-				</DropdownDescription>
-			</DropdownItem>
-		</DropdownMenu>
-	);
-}
-
 export const metadata: Metadata = {
-	title: "gider.im",
+	title: "gider.im is now Wageso - Available on iOS & Android",
 	description:
-		"Free, privacy first, local first, no tracking, no ads, no data collection.",
+		"gider.im has evolved into Wageso! Download the new native iOS and Android apps for a better expense tracking experience.",
 	openGraph: {
-		title: "gider.im",
+		title: "gider.im is now Wageso - Available on iOS & Android",
 		description:
-			"Free, privacy first, local first, no tracking, no ads, no data collection.",
+			"gider.im has evolved into Wageso! Download the new native iOS and Android apps for a better expense tracking experience.",
 		url: "https://gider.im",
 		siteName: "gider.im",
 		locale: "en_US",
@@ -130,7 +55,7 @@ export const metadata: Metadata = {
 		],
 	},
 	twitter: {
-		title: "gider.im",
+		title: "gider.im is now Wageso - Available on iOS & Android",
 		card: "summary_large_image",
 		images: [
 			{
@@ -184,69 +109,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body>
-				<TooltipProvider delayDuration={0} disableHoverableContent>
-					<StackedLayout
-						navbar={
-							<Navbar>
-								<Button href="/" plain>
-									<Logo className="size-10" />
-								</Button>
-								<NavbarDivider className="max-lg:hidden" />
-								<NavbarSection className="max-lg:hidden">
-									{/* <Dropdown>
-										<DropdownButton as={NavbarItem} className="max-lg:hidden">
-											<NavbarLabel>Why gider.im</NavbarLabel>
-											<ChevronDownIcon />
-										</DropdownButton>
-										<WhyDropdownMenu />
-									</Dropdown> */}
-									{navItems.map(({ label, url, external }) => (
-										<NavbarItem
-											key={url}
-											href={url}
-											target={external ? "_blank" : "_self"}
-										>
-											{label}
-										</NavbarItem>
-									))}
-								</NavbarSection>
-								<NavbarSpacer />
-								<NavbarSection>
-									<Link
-										href={PWA_LINK}
-										target="_blank"
-										aria-label="Get it for free"
-									>
-										<RainbowButton>Get it for free</RainbowButton>
-									</Link>
-								</NavbarSection>
-							</Navbar>
-						}
-						sidebar={
-							<Sidebar>
-								<SidebarHeader>
-									<Link href="/">
-										<Button plain>
-											<Logo className="size-4" />
-											<Strong>gider.im</Strong>
-										</Button>
-									</Link>
-								</SidebarHeader>
-								<SidebarBody>
-									<SidebarSection>
-										{navItems.map(({ label, url }) => (
-											<SidebarItem key={url} href={url}>
-												{label}
-											</SidebarItem>
-										))}
-									</SidebarSection>
-								</SidebarBody>
-							</Sidebar>
-						}
-					>
-						{children}
-					</StackedLayout>
-				</TooltipProvider>
+				<main className="min-h-screen">{children}</main>
 				<BreakpointDebug />
 			</body>
 		</html>
